@@ -1,11 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Button from '../components/Button.tsx';
+import ShoppingWeek from '../components/ShoppingWeek'
+
+const buyList = [
+  'Controller',
+  'Bread',
+  'Water',
+  'Notebook',
+  'Math Book',
+  'Choco Bar',
+  'Milk',
+];
 ---
 <html>
   <body>
-    <Button client:load />
+    <h1>Compras de la Semana</h1>
+    <ShoppingWeek client:load items={buyList} />
   </body>
 </html>
 
